@@ -11,6 +11,14 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Test).configureEach {
+    jvmArgs '-Dfile.encoding=UTF-8', '-Dstdout.encoding=UTF-8'
+}
+
 repositories {
     mavenCentral()
 }
@@ -26,6 +34,7 @@ dependencies {
 
 application {
     mainClass = 'com.poc.json.Main'
+    applicationDefaultJvmArgs = ['-Dfile.encoding=UTF-8', '-Dstdout.encoding=UTF-8']
 }
 
 test {

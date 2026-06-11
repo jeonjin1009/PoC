@@ -4,21 +4,23 @@ import com.poc.json.model.Address;
 import com.poc.json.model.User;
 import com.poc.json.service.UserService;
 
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
 public class ConsoleMenu {
 
-    private static final String LINE  = "─".repeat(58);
-    private static final String DLINE = "═".repeat(58);
+    private static final String LINE  = "-".repeat(58);
+    private static final String DLINE = "=".repeat(58);
 
     private final UserService service;
     private final Scanner scanner;
 
     public ConsoleMenu(UserService service) {
         this.service = service;
-        this.scanner = new Scanner(System.in);
+        this.scanner = new Scanner(new InputStreamReader(System.in, StandardCharsets.UTF_8));
     }
 
     public void run() {
