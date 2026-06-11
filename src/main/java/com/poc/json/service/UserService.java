@@ -46,7 +46,7 @@ public class UserService {
         address.setZipCode(zipCode);
         user.setAddress(address);
 
-        List<String> tags = rawTags.isBlank()
+        List<String> tags = (rawTags == null || rawTags.isBlank())
                 ? List.of()
                 : Arrays.stream(rawTags.split(",")).map(String::trim).toList();
         user.setTags(tags);

@@ -32,8 +32,9 @@ public class UserRepository {
     }
 
     public List<User> findByNameContaining(String keyword) throws IOException {
+        if (keyword == null) return List.of();
         return findAll().stream()
-                .filter(u -> u.getName().contains(keyword))
+                .filter(u -> u.getName() != null && u.getName().contains(keyword))
                 .toList();
     }
 
