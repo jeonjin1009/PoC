@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "김철수",
+    "email": "chulsoo@example.com",
+    "age": 30,
+    "active": true,
+    "createdAt": "2024-01-15T10:30:00",
+    "address": {
+      "city": "서울",
+      "district": "강남구",
+      "zipCode": "06234"
+    },
+    "tags": ["admin", "developer"]
+  },
+  {
+    "id": 2,
+    "name": "이영희",
+    "email": "younghee@example.com",
+    "age": 25,
+    "active": false,
+    "createdAt": "2024-03-22T14:00:00",
+    "address": {
+      "city": "부산",
+      "district": "해운대구",
+      "zipCode": "48095"
+    },
+    "tags": ["user"]
+  }
+]

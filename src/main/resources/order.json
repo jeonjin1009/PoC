@@ -1,0 +1,25 @@
+{
+  "orderId": "ORD-2024-001",
+  "userId": 1,
+  "status": "COMPLETED",
+  "totalAmount": 125000,
+  "currency": "KRW",
+  "items": [
+    {
+      "productId": "PROD-001",
+      "name": "노트북 거치대",
+      "quantity": 2,
+      "unitPrice": 45000
+    },
+    {
+      "productId": "PROD-002",
+      "name": "무선 키보드",
+      "quantity": 1,
+      "unitPrice": 35000
+    }
+  ],
+  "metadata": {
+    "source": "mobile",
+    "campaignCode": "SUMMER2024"
+  }
+}
