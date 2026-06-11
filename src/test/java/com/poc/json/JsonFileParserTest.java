@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.poc.json.model.Order;
 import com.poc.json.model.User;
 import com.poc.json.parser.JsonFileParser;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -16,12 +15,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class JsonFileParserTest {
 
-    private JsonFileParser parser;
-
-    @BeforeEach
-    void setUp() {
-        parser = new JsonFileParser();
-    }
+    private final JsonFileParser parser = new JsonFileParser();
 
     @Test
     @DisplayName("users.json → List<User> 파싱")

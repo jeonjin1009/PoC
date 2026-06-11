@@ -41,9 +41,19 @@ public class JsonFileParser {
         return mapper.readValue(file, type);
     }
 
+    /** 파일 경로에서 제네릭 컬렉션으로 역직렬화 (e.g. List<User>) */
+    public <T> T parseFromFile(File file, TypeReference<T> typeRef) throws IOException {
+        return mapper.readValue(file, typeRef);
+    }
+
     /** JSON 문자열을 POJO로 역직렬화 */
     public <T> T parseFromString(String json, Class<T> type) throws IOException {
         return mapper.readValue(json, type);
+    }
+
+    /** JSON 문자열을 제네릭 컬렉션으로 역직렬화 */
+    public <T> T parseFromString(String json, TypeReference<T> typeRef) throws IOException {
+        return mapper.readValue(json, typeRef);
     }
 
     /** 트리 모델(JsonNode)로 파싱 — 스키마 불확실 시 유용 */
